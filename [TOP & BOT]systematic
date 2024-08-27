@@ -1,0 +1,90 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DUAL TOP and BOTTOM ### //
+
+[{
+"include": "~/.config/waybar/modules2",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 1,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+	"cpu", 
+	"temperature", 
+	"memory",
+	"disk", 
+	],
+  
+"modules-center": [
+	"hyprland/workspaces#kanji",  
+	], 
+
+"modules-right": [
+	"custom/weather",	  
+	"battery", 
+	"backlight",
+	"bluetooth",
+	"group/connections",
+	"custom/updater",
+	"custom/cycle_wall",
+	"custom/lock", 
+	],
+},
+
+{
+"include": "~/.config/waybar/modules2",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "bottom",
+"spacing": 5,
+"fixed-center": true,
+"ipc": true,
+"height": 0,
+"margin-left": 8,
+"margin-right": 8,
+//"gtk-layer-shell": true,
+//"margin-bottom": 0,
+
+"modules-left": [
+	"custom/menu",
+	"custom/separator#dot-line",
+	"wlr/taskbar",
+	],
+
+"modules-center": [
+	"idle_inhibitor",
+	"clock",
+	"custom/separator#dot-line",
+	"custom/cava_mviz",
+	"custom/separator#dot-line",
+	"custom/light_dark",
+	],
+
+"modules-right": [
+	"custom/launch_thunar",
+	"hyprland/window",
+	"tray",
+	"group/audio_player",
+	// "mpris",
+	//"keyboard-state",
+	//"pulseaudio",
+	//"wireplumber", 
+	"group/audio",  
+	"custom/swaync",
+	"custom/power",
+	], 
+
+}],
+
+
+	

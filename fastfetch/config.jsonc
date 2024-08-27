@@ -1,0 +1,135 @@
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    //"source": "~/.config/fastfetch/image-0.png",
+    "source": "$(ls ~/.config/fastfetch/*.png | shuf -n 1)",
+    "type": "kitty-direct",
+    "height": 15,
+    "width": 30,
+    "padding": {
+      "top": 1
+      }
+    },
+
+  "general": {
+    "multithreading": true
+  },
+  "display": {
+    "separator": "➜   ",
+    "color":"dim_cyan"
+    
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "format": "                                {6}{7}{8}",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╭─────────────────────────────────────────────────────────────────────╮", // `\u001b` is `\033`, or `\e`
+    },
+    "break",
+    {
+      "key": "     OS           ",
+      "keyColor": "red",
+      "type": "os",
+      "outputColor":"dim_blue"
+    },
+    {
+      "key": "    󰌢 Machine      ",
+      "keyColor": "dim_magenta",
+      "type": "host",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Kernel       ",
+      "keyColor": "cyan",
+      "type": "kernel",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "    󰅐 Uptime       ",
+      "keyColor": "red",
+      "type": "uptime",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Packages     ",
+      "keyColor": "dim_magenta",
+      "type": "packages",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     WM           ",
+      "keyColor": "cyan",
+      "type": "wm",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Shell        ",
+      "keyColor": "red",
+      "type": "shell",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Terminal     ",
+      "keyColor": "dim_magenta",
+      "type": "terminal",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Font         ",
+      "keyColor": "cyan",
+      "type": "terminalfont",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "    󰻠 CPU          ",
+      "keyColor": "red",
+      "type": "cpu",
+      "outputColor":"dim_blue",
+    },
+    // {
+    //   "key": "    󰍛 GPU          ",
+    //   "keyColor": "cyan",
+    //   "type": "gpu"
+    // },
+    {
+      "key": "    󰑭 Memory       ",
+      "keyColor": "dim_magenta",
+      "type": "memory",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Internet     ",
+      "keyColor": "cyan",
+      "type": "wifi",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "    󰩟 Local IP     ",
+      "keyColor": "red",
+      "type": "localip",
+      "compact": true,
+      "outputColor":"dim_blue",
+      
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "╰─────────────────────────────────────────────────────────────────────╯" // `\u001b` is `\033`, or `\e`
+    },
+    "break",
+  //   {
+  //     "type": "colors",
+  //     "paddingLeft": 34,
+  //     "symbol": "circle",
+  //     "block": {
+  //       "width": 10
+  //     }
+  //   }
+   ]
+}
