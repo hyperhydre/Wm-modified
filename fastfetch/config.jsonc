@@ -4,11 +4,11 @@
   "logo": {
     //"source": "~/.config/fastfetch/image-0.png",
     "source": "$(ls ~/.config/fastfetch/*.png | shuf -n 1)",
-    "type": "kitty-direct",
+    "type": "kitty",
     "height": 15,
     "width": 30,
     "padding": {
-      "top": 1
+      "top": 3
       }
     },
 
@@ -57,38 +57,45 @@
       "outputColor":"dim_blue",
     },
     {
-      "key": "     Packages     ",
+      "type": "command",
+      "key": "     Age          ",
       "keyColor": "dim_magenta",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "outputColor":"dim_blue",
+    },
+    {
+      "key": "     Packages     ",
+      "keyColor": "cyan",
       "type": "packages",
       "outputColor":"dim_blue",
     },
     {
       "key": "     WM           ",
-      "keyColor": "cyan",
+      "keyColor": "red",
       "type": "wm",
       "outputColor":"dim_blue",
     },
     {
       "key": "     Shell        ",
-      "keyColor": "red",
+      "keyColor": "dim_magenta",
       "type": "shell",
       "outputColor":"dim_blue",
     },
     {
       "key": "     Terminal     ",
-      "keyColor": "dim_magenta",
+      "keyColor": "cyan",
       "type": "terminal",
       "outputColor":"dim_blue",
     },
     {
       "key": "     Font         ",
-      "keyColor": "cyan",
+      "keyColor": "red",
       "type": "terminalfont",
       "outputColor":"dim_blue",
     },
     {
       "key": "    󰻠 CPU          ",
-      "keyColor": "red",
+      "keyColor": "dim_magenta",
       "type": "cpu",
       "outputColor":"dim_blue",
     },
@@ -99,19 +106,19 @@
     // },
     {
       "key": "    󰑭 Memory       ",
-      "keyColor": "dim_magenta",
+      "keyColor": "cyan",
       "type": "memory",
       "outputColor":"dim_blue",
     },
     {
       "key": "     Internet     ",
-      "keyColor": "cyan",
+      "keyColor": "red",
       "type": "wifi",
       "outputColor":"dim_blue",
     },
     {
       "key": "    󰩟 Local IP     ",
-      "keyColor": "red",
+      "keyColor": "dim_magenta",
       "type": "localip",
       "compact": true,
       "outputColor":"dim_blue",
